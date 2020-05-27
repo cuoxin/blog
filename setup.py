@@ -1,20 +1,19 @@
-import mysql.connector
+from pip._internal import main
 
-database = mysql.connector.connect(user='root', password='123456', database='web', charset="utf8mb4")
-cursor = database.cursor()
-'''
-# id 题目，时间，预览
-cursor.execute("CREATE TABLE artical_p (id INT AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255), time VARCHAR(15), preview VARCHAR(255)) default CHARSET=utf8mb4")
+def install():
+    ''' 安装相关模块 '''
+    with open ("./modList.txt", "r") as f:
+        lines = f.readlines()
+        for line in lines:
+            line.strip()
+            main(["install", line])
 
-# id 文章内容
-cursor.execute("CREATE TABLE artical_c (id INT AUTO_INCREMENT PRIMARY KEY, content LONGTEXT) default CHARSET=utf8mb4")
+def dbInit():
+    ''' 数据库初始化 '''
+    from flaskr import db
+    db.create_all()
 
-# id 文章id 标签id
-cursor.execute("CREATE TABLE artical_l (id INT AUTO_INCREMENT PRIMARY KEY, artical_id INT, label_id INT) default CHARSET=utf8mb4")
 
-# id 标签 数量
-cursor.execute("CREATE TABLE label (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), number INT) default CHARSET=utf8mb4")
+install()
 
-# id password
-cursor.execute("CREATE TABLE user (id INT AUTO_INCREMENT PRIMARY KEY, password VARCHAR(255)) default CHARSET=utf8mb4")
-'''
+dbInit()

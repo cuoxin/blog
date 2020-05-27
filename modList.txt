@@ -5,5 +5,4 @@ pymysql
 Markdown
 flask-login
 
-开发环境
 python_dotenv
