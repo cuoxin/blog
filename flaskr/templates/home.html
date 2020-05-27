@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Adrian_Yan</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homeStyle.css') }}" charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--自动缩放-->
+    </head>
+    <body style="background-color: rgb(12, 149, 151);">
+        <div class="all">
+            <div class="head">
+                <a href="{{ url_for('backstage') }}"><img src="{{ url_for('static', filename='img/head.jpg') }}"></a>
+                <p>Adrian_Yan</p>
+            </div>
+
+            <div class="interduce">
+                <p>中北大学本科生，Python使用者，守望先锋，骑行，羽毛球，口琴爱好者。</p>
+                <p>联系方式：yanzexu_adrian@qq.com(邮箱)</p>
+                <nav>
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('note', page=1) }}">Note</a>
+                    <a href="{{ url_for('aboutMe') }}">About_Me</a>
+                </nav>
+            </div>
+        </div>
+
+    </body>
+</html>

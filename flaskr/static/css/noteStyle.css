@@ -1,0 +1,16 @@
+a.note {
+    color: black;
+    text-decoration: none;
+}
+
+a.note:hover {
+    text-decoration: underline;
+}
+
+a.previousPage {
+    float: left;
+}
+
+a.nextPage {
+    float: right;
+}

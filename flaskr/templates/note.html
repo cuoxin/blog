@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/noteStyle.css') }}" charset="utf-8" />
+{% endblock %}
+
+
+{% block content %}
+<div class="main">
+    {%  for artical in articals %}
+    <hr />
+    <a href="{{ url_for('artical', id=artical.id) }}" class="note">
+        <article class="note">
+            <h3>{{ artical.title }}</h3>
+            {{ artical.preview | safe}} .......
+        </article>
+    </a>
+    {% endfor %}
+    <hr />
+    {% if page != 1 %}
+    <a class="previousPage" href="{{ url_for('note', page=page-1) }}">上一页</a>
+    {% endif %}
+    {% if articals[-1].id != 1 %}
+    <a class="nextPage" href="{{ url_for('note', page=page+1) }}">下一页</a>
+    {% endif %}
+
+</div>
+{% endblock %}

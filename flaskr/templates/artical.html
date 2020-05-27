@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/articalStyle.css') }}" charset="utf-8" />
+{% endblock %}
+
+{% block content %}
+<div class="label">
+    <p>本文标签：
+        {% for label in labels %}
+        {{ label.name }}
+        {% endfor %}
+    </p>
+</div>
+<div class="main">
+    {{ artical.content | safe }}
+</div>
+{% endblock %}
