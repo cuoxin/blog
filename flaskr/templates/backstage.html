@@ -2,6 +2,7 @@
 
 {% block content %}
 <div class="main">
+    <hr />
     <form method="POST" enctype=multipart/form-data action="/backstage_md_file/" name="md_file">
         <h3>文件</h3>
         <input class="input_file" type="file" accept=".md" name="file" required>
@@ -14,11 +15,20 @@
         <br />
         <input class="submit_back" type="submit" value="提交">
     </form>
-    <br />
+    <hr />
     <form method="POST" action="/backstage_lable/" name="lable">
-        增加新标签:<input class="new_label" type="text" name="new_label">
+        <h3>增加新标签</h3>
+        <input class="new_label" type="text" name="new_label">
         <input class="submit_back" type="submit" value="确定">
     </form>
+    <hr />
+    <form method="POST" action="/backstage_delet/" name="delet">
+        <h3>需要删除的文章(支持多文章以","隔开)</h3>
+        <input class="artical_delet" type="text" name="delet">
+        <input class="artical_delet_submit" type="submit" value="确定">
+    
+    </form>
+    
     
 </div>
 {% endblock %}

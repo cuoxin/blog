@@ -4,5 +4,6 @@ mysql-connector
 pymysql
 Markdown
 flask-login
-
 python_dotenv
+gunicorn
+mysqlclient
