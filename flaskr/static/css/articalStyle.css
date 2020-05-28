@@ -4,3 +4,25 @@ div.label {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+table{
+    border-collapse:collapse;
+    width: 100%;
+}
+
+table, td, th{
+    font-size:1em;
+    border:1px solid gray;
+    text-align: center;
+}
+
+td {
+    padding: 15px;
+}
+
+th {
+    font-size: 1.1em;
+    background-color: black;
+    color: white;
+}

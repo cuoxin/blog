@@ -5,7 +5,7 @@ import markdown, time, re
 
 def mdTransformation(text):
 
-    html = markdown.markdown(text, output_format="html5", extensions=['markdown.extensions.toc','markdown.extensions.fenced_code'])
+    html = markdown.markdown(text, output_format="html5", extensions=['markdown.extensions.toc','markdown.extensions.fenced_code', 'markdown.extensions.tables'])
 
     return html
 
