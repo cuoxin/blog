@@ -32,14 +32,18 @@ FLASK_APP=flaskr
 ```
 
 之后就可以使用 `flask run` 启动服务了
-----------初期部署结束----------
+
+初期部署结束
+
+--------------------
 ### __init__.py
+
 在 `__init__.py` 中进行
 [中文文档地址](https://dormousehole.readthedocs.io/en/latest/tutorial/factory.html)
 
 - SECRET_KEY 在实际生产中应该用**随机值**，开发中可先固定(官方使用'dev')
 - 配置写在 /instance/ 下，可用函数 `app.config.from_pyfile()` 读取文件夹下配置文件
-- 官方推荐使用函数工厂。但是能力有限，无法理解实际运作。
+- 官方推荐使用函数工厂。~~但是能力有限，无法理解实际运作。~~
 ### 数据库
 个人认为数据库是比较难的部分，因为需要学习一样新东西
 - 注意在sqlalchemy中变量名需要和数据库中的字段名一致

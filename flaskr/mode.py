@@ -44,3 +44,23 @@ class User(db.Model, UserMixin):
     
     def checkPassword(self, password):
         return check_password_hash(self.password, password)
+
+class Message(db.Model):
+    __tablename__ = 'message'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    artical_id = db.Column(db.Integer)
+    name = db.Column(db.String(20))
+    email = db.Column(db.String(20))
+    content = db.Column(db.Text)
+    time = db.Column(db.String(20))
+
+class MessageMessage(db.Model):
+    __tabalename__ = 'message_m'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    message_id = db.Column(db.Integer)
+    artical_id = db.Column(db.Integer)
+    content = db.Column(db.Text)
+    name = db.Column(db.String(20))
+    email = db.Column(db.String(20))

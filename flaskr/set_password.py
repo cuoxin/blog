@@ -13,7 +13,7 @@ def admin(username, password):
     if user is not None:
         click.echo('Updating user...')
         user.username = username
-        user.set_password(password)  # 设置密码
+        user.setPassword(password)  # 设置密码
     else:
         click.echo('Creating user...')
         user = User(username=username, name='Admin')

@@ -28,5 +28,18 @@ th {
 }
 
 img {
-    width: 50%;
+    width: 60%;
+}
+
+div.message {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.put_message {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
 }

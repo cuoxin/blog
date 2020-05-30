@@ -11,7 +11,7 @@ def backstage():
     return render_template("backstage.html", theme="Backstage", labels=labels)
 
 @app.route("/backstage_md_file/", methods=['POST'])
-def backstage_md_file():
+def backstageMdFile():
     if request.method == "POST":
         file = request.files['file']
         labels = request.form.getlist("label") ## 标签
@@ -22,7 +22,7 @@ def backstage_md_file():
     return redirect(url_for("backstage"))
 
 @app.route("/backstage_lable/", methods=['POST'])
-def backstage_lable():
+def backstageLable():
     if request.method == "POST":
         text = request.form.get("new_label")
         label.addLabel(text)
@@ -30,7 +30,7 @@ def backstage_lable():
     return redirect(url_for("backstage"))
 
 @app.route("/backstage_delet/", methods=['POST'])
-def backstage_delet():
+def backstageDelet():
     if request.method == "POST":
         text = request.form.get("delet")
         text_list = text.split(",")

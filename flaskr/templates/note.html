@@ -21,7 +21,7 @@
     {% if page != 1 %}
     <a class="previousPage" href="{{ url_for('note', page=page-1) }}">上一页</a>
     {% endif %}
-    {% if articals.count() == 8 %}
+    {% if articals[-1].id != 1 %}
     <a class="nextPage" href="{{ url_for('note', page=page+1) }}">下一页</a>
     {% endif %}
 
