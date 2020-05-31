@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Mr.Yan-{{ theme }}</title>
         <link rel="shortcut icon" href="{{url_for('static',filename='img/favicon.ico')}}" type="image/x-icon"/>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/baseStyle-v1.0.css') }}" charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/baseStyle-v1.1.css') }}" charset="utf-8" />
         {% block css %}
         {% endblock %}
     </head>
@@ -27,7 +27,9 @@
         </div>
         {% endblock %}
         <footer>
-            <p>页脚暂时还没想好写啥，就给大家拜个早年吧！</p>
+            <p name="footer_p">© 2020 - 2020
+            <a href="{{ url_for('home') }}">Adrian_Yan</a>
+            </p>
         </footer>
     </body>
 </html>

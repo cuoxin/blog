@@ -20,11 +20,13 @@
     <a href="#" onclick="javascript:history.back(-1);">返回</a>
 </div>
 <div class="message">
-    <h2>Message</h2>
+    <h2>本文的评论</h2>
     {% for message in messages %}
-    <p>{{ message.name }}</p>
-    <p>{{ message.time }}</p>
-    <p>{{ message.content }}</p>
+    <div name="information">
+        <strong><p name="name">{{ message.name }}</p></strong>
+    <p name="time" style="font-size: small;">{{ message.time }}</p>
+    </div>
+    <p name="content">{{ message.content }}</p>
     <hr />
     {% endfor %}
     
@@ -33,12 +35,12 @@
     <h2>撰写评论</h2>
     <form method="POST" action="/put_message/" name="put_message">
         <input type="hidden" value="{{ artical.id }}" name="id">
-        <p>评论</p>
-        <textarea name="content" rows="8" cols="45"></textarea>
-        <p>昵称</p>
-        <input class="name" type="text" name="name">
-        <p>电子邮件</p>
-        <input class="email" type="email" name="email">
+        <p>评论*</p>
+        <textarea name="content" rows="8" cols="45" required></textarea>
+        <p>昵称*</p>
+        <input class="name" type="text" name="name" required>
+        <p>电子邮件*</p>
+        <input class="email" type="email" name="email" required>
         <br />
         <br />
         <input class="submit" type="submit" value="提交">
