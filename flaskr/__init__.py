@@ -26,4 +26,4 @@ def aboutMe():
 def favicon():
     return current_app.send_static_file('img/favicon.ico')
 
-from flaskr import note, artical, error, backstage, login, set_password
+from flaskr import note, artical, error, backstage, login, set_password, search_label

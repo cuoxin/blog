@@ -43,3 +43,8 @@ div.put_message {
     margin-right: auto;
 
 }
+
+div.label a {
+    color:  gray;
+    text-decoration: none;
+}

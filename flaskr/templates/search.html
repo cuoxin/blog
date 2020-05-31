@@ -1,0 +1,10 @@
+{% extends 'note.html' %}
+
+{% block page %}
+{% if page != 1 %}
+<a class="previousPage" href="{{ url_for('searchLabel', page=page-1, label_id=label_id, label_name=theme) }}">上一页</a>
+{% endif %}
+{% if articals.count() == 8 %}
+<a class="nextPage" href="{{ url_for('searchLabel', page=page+1, label_id=label_id, label_name=theme) }}">下一页</a>
+{% endif %}
+{% endblock %}
