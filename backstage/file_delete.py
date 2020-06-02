@@ -31,6 +31,10 @@ def deleteArticalLabel(id):
     
     return label_id_list
 
+def deleteMessage():
+    ''' 删除文章留言 '''
+    pass
+
 def deleteFile(artical_id_list):
 
     for id in artical_id_list:

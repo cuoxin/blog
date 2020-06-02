@@ -1,0 +1,11 @@
+div.paper {
+    width: 100%;
+    background-color: white;
+    min-height: 100%;
+}
+
+div.main {
+    width: 85%;
+    min-height: 100%;
+    background-color: white;
+}

@@ -3,25 +3,45 @@
     <head>
         <meta charset="utf-8">
         <title>Adrian_Yan</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homeStyle-v1.0.css') }}" charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home/homeStyle-v1.0.css') }}" charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home/phomeStyle-v1.0.css') }}" charset="utf-8" media="screen and (min-width: 640px)" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home/mhomeStyle-v1.0.css') }}" charset="utf-8" media="screen and (max-width: 639px)"/>
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
     </head>
-    <body style="background-color: rgb(12, 149, 151);">
-        <div class="all">
-            <div class="head">
-                <a href="{{ url_for('backstage') }}"><img src="{{ url_for('static', filename='img/head.jpg') }}"></a>
-                <p>Adrian_Yan</p>
+    <body>
+        <div class="paper">
+            <div class="main">
+                <div class="header">
+                    <p>严泽旭的个人主页</p>
+                </div>
+                <div class="content">
+                    <h1>严泽旭</h1>
+                    <nav>
+                        <a href="{{ url_for('note', page=1) }}">文章</a>
+                        |
+                        <a href="{{ url_for('aboutMe') }}">关于</a>
+                    </nav>
+                    <article class="talk">
+                        <p>你好，我是严泽旭(Adrian Yan)。欢迎来到我的个人主页。</p>
+                        <p>我的主要语言为 Python，所以我写或分享的文章大多数将会与 Python 有关。</p>
+                        <p>我现在正在做的事情：</p>
+                            <ul>
+                                <li>修改博客主题</li>
+                                <ul>
+                                    <li>已完成主页修改</li>
+                                </ul>
+                            </ul>
+                        <p>如果你想联系我，请来：<a href="http://www.baidu.com/">联系我</a>(未更新)</p>
+
+                    </article>
+                </div>
+                <div class="footer">
+                    <p>© 2020 – 2020 严泽旭</p>
+                </div>
             </div>
 
-            <div class="interduce">
-                <p>中北大学本科生，Python使用者，守望先锋，骑行，羽毛球，口琴爱好者。</p>
-                <p>联系方式：yanzexu_adrian@qq.com(邮箱)</p>
-                <nav>
-                    <a href="{{ url_for('home') }}">Home</a>
-                    <a href="{{ url_for('note', page=1) }}">Note</a>
-                    <a href="{{ url_for('aboutMe') }}">About_Me</a>
-                </nav>
-            </div>
         </div>
-
     </body>
 </html>
