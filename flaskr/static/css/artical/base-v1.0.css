@@ -5,35 +5,35 @@ div.content {
 }
 
 div.information div.inf_main div.time {
-    margin-top: 30px;
+    margin-top: 3rem;
 }
 
 div.information div.inf_main div.time img{
-    width: 55px;
-    height: 55px;
+    width: 5.5rem;
+    height: 5.5rem;
 }
 
 div.information div.inf_main  p.title {
     color: gray;
-    font-size: 17px;
+    font-size: 1.7rem;
 }
 
 div.information div.inf_main  p.content {
     color: white;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 div.information div.inf_main div.label {
     clear: both;
 
-    padding-top: 30px;
-    font-size: 14px;
+    padding-top: 3rem;
+    font-size: 1.4rem;
 }
 
 div.information div.inf_main div.label a {
     color: gray;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 1rem;
 }
 
 div.information div.inf_main div.label a:hover {
@@ -41,65 +41,64 @@ div.information div.inf_main div.label a:hover {
 }
 
 div.artical_main div.artical_content p {
-    font-size: 16px;
-    line-height: 35px;
+    font-size: 1.6rem;
+    line-height: 3.5rem;
 }
 
 div.artical_main div.artical_content h1 {
-    font-size: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 div.artical_main div.artical_content h2 {
-    font-size: 25px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 div.artical_main div.artical_content h3 {
-    font-size: 20px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 div.artical_main div.artical_content h4 {
-    font-size: 16px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 div.artical_main div.artical_content img {
     max-width: 100%;
-    max-height: 400px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 15px;
-}
-
+    max-height: 40rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 1.5rem;
+} 
 div.artical_main div.artical_content code {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 div.artical_main div.artical_content li {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 table {
-    font-size: 16px;
+    font-size: 1.6rem;
     border-collapse: collapse;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     width: 100%;
 }
 
 table,th, td{
-  border: 1px solid gray;
-  padding: 15px;
+  border: 0.1rem solid gray;
+  padding: 1.5rem;
 }
 
 th {
-    font-size: 18px;
+    font-size: 1.8rem;
     background-color: black;
     color: white;
 }
@@ -109,40 +108,40 @@ td {
 }
 
 div.artical_main div.message p.theme, div.artical_main div.put_message p.theme{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 25px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
 }
 
 div.artical_main div.message div.mes_information p.name {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 div.artical_main div.message div.mes_information p.time {
-    font-size: 13px;
-    margin-left: 10px;
+    font-size: 1.3rem;
+    margin-left: 1rem;
 }
 
 div.artical_main div.message p.content {
-    font-size: 16px;
-    margin-top: 14px;
-    line-height: 35px;
+    font-size: 1.6rem;
+    margin-top: 1.4rem;
+    line-height: 3.5rem;
 }
 
 div.artical_main div.message hr {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 div.artical_main div.put_message p.remind {
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 div.artical_main div.put_message input.put {
-    font-size: 16px;
-    margin-bottom: 18px;
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
 }
 
 div.artical_main div.put_message input.submit {
-    font-size: 16px;
-    margin-bottom: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
 }

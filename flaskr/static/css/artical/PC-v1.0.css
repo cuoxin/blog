@@ -1,8 +1,8 @@
 div.information {
     width: 100%;
-    min-height: 300px;
+    min-height: 30rem;
     background-color: black;
-    padding-top: 80px;
+    padding-top: 8rem;
 }
 
 div.information div.inf_main {
@@ -18,16 +18,16 @@ div.artical_main {
 
 div.information div.inf_main  div.time div {
     float: left;
-    margin-right: 60px;
+    margin-right: 6rem;
 }
 
 div.information div.inf_main div.title p{
-    margin-top: 80px;
+    margin-top: 8rem;
     color: white;
-    font-size: 40px;
+    font-size: 4rem;
 }
 
 div.artical_main div.put_message textarea {
-    font-size: 16px;
-    margin-bottom: 18px;
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
 }
