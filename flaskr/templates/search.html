@@ -1,10 +1,41 @@
 {% extends 'note.html' %}
 
-{% block page %}
-{% if page != 1 %}
-<a class="previousPage" href="{{ url_for('searchLabel', page=page-1, label_id=label_id, label_name=theme) }}">上一页</a>
-{% endif %}
-{% if articals.count() == 8 %}
-<a class="nextPage" href="{{ url_for('searchLabel', page=page+1, label_id=label_id, label_name=theme) }}">下一页</a>
-{% endif %}
+{% block author %}
+<div class="author">
+    <div class="title">
+        <p>Tag</p>
+
+    </div>
+    <div class="head_name">
+        <h1 style="
+        font-size: 6rem;
+        text-align: center;
+        ">#{{ theme }}</h1>
+    </div>
+
+</div>
+{% endblock %}
+
+
+{% block tr_page %}
+<div class="tr_page">
+    {% if page != 1 %}
+    <a href="{{ url_for('searchLabel', page=page-1, label_id=label_id, label_name=theme) }}">
+        <div class="previous">
+            <p>&lt;&lt;&lt;</p>
+        </div>
+    </a>
+    {% endif %}
+    <div class="how_many">
+        <p>{{ page }}</p>
+    </div>
+    {% if articals.count() == 8 %}
+    <a href="{{ url_for('searchLabel', page=page+1, label_id=label_id, label_name=theme) }}">
+        <div class="next">
+            <p>&gt;&gt;&gt;</p>
+        </div>
+    </a>
+    {% endif %}
+
+</div>
 {% endblock %}

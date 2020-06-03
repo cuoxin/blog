@@ -1,17 +1,20 @@
-{% extends 'base.html' %}
+{% extends 'home.html' %}
 
-{% block content %}
-<div class="main">
+{% block CSS %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about_me/PC-v1.0.css') }}" charset="utf-8" media="screen and (min-width: 640px)" />
+{% endblock %}
+
+
+{% block talk %}
     <p>你好，我是本站的开发者</p>
     <p>网站开发进度，主体功能已经实现。但是还是太丑了，慢慢优化吧</p>
     <p>接下来的进度为</p>
     <ul>
         <li>引入QQ登录，将会重构用户模型，更改评论方法, 到时候现有评论会被清除</li>
-        <li>更换博客主题</li>
+        <s><li>更换博客主题</li></s>
         <li>优化后台界面，增加评论情况，用户数等(各位看不见的地方)</li>
     </ul>
     <p>有问题可以联系：</p>
     <p>邮箱：yanzexu_adrian@qq.com</p>
     <p>其他的联系方式我看情况添加吧</p>
-</div>
 {% endblock %}

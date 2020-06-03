@@ -6,6 +6,9 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home/base-v1.0.css') }}" charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home/PC-v1.0.css') }}" charset="utf-8" media="screen and (min-width: 640px)" />
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home/mobile-v1.0.css') }}" charset="utf-8" media="screen and (max-width: 639px)"/>
+
+        {% block CSS %}
+        {% endblock %}
         
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 
@@ -17,13 +20,16 @@
                     <p>严泽旭的个人主页</p>
                 </div>
                 <div class="content">
-                    <h1>严泽旭</h1>
+                    <h1>{{ theme }}</h1>
                     <nav>
+                        <a href="{{ url_for('home') }}">首页</a>
+                        |
                         <a href="{{ url_for('note', page=1) }}">文章</a>
                         |
                         <a href="{{ url_for('aboutMe') }}">关于</a>
                     </nav>
                     <article class="talk">
+                        {% block talk %}
                         <p>你好，我是严泽旭(Adrian Yan)。欢迎来到我的个人主页。</p>
                         <p>我的主要语言为 Python，所以我写或分享的文章大多数将会与 Python 有关。</p>
                         <p>我现在正在做的事情：</p>
@@ -33,8 +39,8 @@
                                     <li>已完成主页修改</li>
                                 </ul>
                             </ul>
-                        <p>如果你想联系我，请来：<a href="http://www.baidu.com/">联系方式</a>(未更新)</p>
-
+                        <p>如果你想联系我，请来：<a href="{{ url_for('contact') }}">联系方式</a></p>
+                        {% endblock %}
                     </article>
                 </div>
                 <div class="footer">

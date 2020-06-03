@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/articalStyle-v1.1.css') }}" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/codeStyle-v1.0.css') }}" charset="utf-8" />
+<script src="{{ url_for('static', filename='js/highlight.js') }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{% endblock %}
+
+{% block content %}
+<div class="label">
+    <p>本文标签：
+        {% for label in labels %}
+        <a href="{{ url_for('searchLabel', label_id=label.id, page=1, label_name=label.name) }}">#{{ label.name }}</a>
+        {% endfor %}
+    </p>
+</div>
+<div class="main">
+    {{ artical.content | safe }}
+    <a href="#" onclick="javascript:history.back(-1);">返回</a>
+</div>
+<div class="message">
+    <h2>本文的评论</h2>
+    {% for message in messages %}
+    <div name="information">
+        <strong><p name="name">{{ message.name }}</p></strong>
+    <p name="time" style="font-size: small;">{{ message.time }}</p>
+    </div>
+    <p name="content">{{ message.content }}</p>
+    <hr />
+    {% endfor %}
+    
+</div>
+<div class="put_message">
+    <h2>撰写评论</h2>
+    <form method="POST" action="/put_message/" name="put_message">
+        <input type="hidden" value="{{ artical.id }}" name="id">
+        <p>评论*</p>
+        <textarea name="content" rows="8" cols="45" required></textarea>
+        <p>昵称*</p>
+        <input class="name" type="text" name="name" required>
+        <p>电子邮件*</p>
+        <input class="email" type="email" name="email" required>
+        <br />
+        <br />
+        <input class="submit" type="submit" value="提交">
+    </form>
+</div>
+{% endblock %}

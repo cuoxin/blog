@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block content %}
+{% block author %}
 <div class="author">
     <div class="title">
         <p>Author</p>
@@ -35,6 +36,7 @@
     </table>
 
 </div>
+{% endblock %}
 <div class="articals">
     <div class="head">
         <p>Artical</p>
@@ -53,6 +55,7 @@
     </div>
     {% endfor %}
 
+    {% block tr_page %}
     <div class="tr_page">
         {% if page != 1 %}
         <a href="{{ url_for('note', page=page-1) }}">
@@ -73,6 +76,7 @@
         {% endif %}
 
     </div>
+    {% endblock %}
 </div>
 
 {% endblock %}

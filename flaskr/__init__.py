@@ -16,11 +16,15 @@ login_manager.login_message = ""
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("home.html", theme="严泽旭")
 
 @app.route("/aboutMe")
 def aboutMe():
-    return render_template("about_me.html", theme="About Me")
+    return render_template("about_me.html", theme="关于我和本站")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html", theme="联系方式")
 
 @app.route("/favicon.ico")
 def favicon():

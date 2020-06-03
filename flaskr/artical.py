@@ -18,7 +18,7 @@ def artical(id):
 
     messages = Message.query.filter_by(artical_id=id).all()
     
-    return render_template("artical.html", theme=artical.title, artical=content, labels=labels, messages=messages)
+    return render_template("artical.html", theme=artical.title, artical=content, time=artical.time, labels=labels, messages=messages)
 
 @app.route("/put_message/", methods=["POST"])
 def putMessage():
