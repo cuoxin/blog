@@ -1,0 +1,52 @@
+div.nav {
+    width: 100%;
+    height: 6rem;
+    background-color: black;
+    position: fixed;
+    z-index: 999;
+}
+
+div.nav_sign h1 {
+    font-size: 2.3rem;
+}
+
+div.nav_content ion-icon.two-lines {
+    color: white;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: 0;
+}
+
+div.nav_content ul {
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    top: 3.5rem;
+    background-color: white;
+    border: 0.1rem solid gray;
+    display: none;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+div.nav_content ul li a{
+    display: block;
+    width: 15rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    margin-left: 1rem;
+}
+
+ion-icon.two-lines:hover + ul {
+    display: block;
+}
+
+div.nav_content ul:hover {
+    display: block;
+}

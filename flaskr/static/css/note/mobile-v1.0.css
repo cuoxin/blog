@@ -1,0 +1,13 @@
+div.content {
+    padding: 0;
+    padding-top: 11rem;
+    min-height: 100%;
+}
+
+div.author {
+    width: 100%;
+}
+
+div.articals {
+    width: 100%;
+}

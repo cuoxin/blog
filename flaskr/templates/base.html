@@ -2,34 +2,47 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Mr.Yan-{{ theme }}</title>
-        <link rel="shortcut icon" href="{{url_for('static',filename='img/favicon.ico')}}" type="image/x-icon"/>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/baseStyle-v1.1.css') }}" charset="utf-8" />
-        {% block css %}
+        <title>{{ theme }}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base/base-v1.0.css') }}" charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base/PC-v1.0.css') }}" charset="utf-8" media="screen and (min-width: 640px)" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base/mobile-v1.0.css') }}" charset="utf-8" media="screen and (max-width: 639px)"/>
+        {% block CSS %}
         {% endblock %}
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     </head>
     <body>
-        <div class="head">
-            <div class="name">
-                <p>{{ theme }}</p>
-            </div>
-            <div class="menu">
-                <nav>
-                    <a href="{{ url_for('home') }}">Home</a>
-                    <a href="{{ url_for('note', page=1) }}">Note</a>
-                    <a href="{{ url_for('aboutMe') }}">About_Me</a>
-                </nav>
-            </div>
-        </div>
-        {% block content %}
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script><!--图标-->
+
         <div class="main">
-            <p>如果你看见这个，那大概率是遇见404了。请不要随便改地址，也没啥好东西。有问题请联系邮箱吧！</p>
+            <div class="nav">
+                <div class="nav_main">
+                    <div class="nav_sign">
+                        <h1>Adrian_Yan</h1>
+                    </div>
+                    <div class="nav_content">
+                        <ion-icon name="reorder-two-outline" class="two-lines"></ion-icon>
+                        <ul>
+                            <li><a href="{{ url_for('home') }}">首页</a></li>
+                            <li><a href="{{ url_for('note', page=1) }}">文章</a></li>
+                            <li><a href="{{ url_for('aboutMe') }}">关于</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="footer">
+                <footer>
+                    <p>© 2020 – 2020 严泽旭</p>
+                    <p>Powered by Flask</p>
+                </footer>
+            </div>
         </div>
-        {% endblock %}
-        <footer>
-            <p name="footer_p">© 2020 - 2020
-            <a href="{{ url_for('home') }}">Adrian_Yan</a>
-            </p>
-        </footer>
     </body>
 </html>

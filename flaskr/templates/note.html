@@ -1,31 +1,78 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/noteStyle-v1.0.css') }}" charset="utf-8" />
+{% block CSS %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/note/base-v1.0.css') }}" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/note/PC-v1.0.css') }}" charset="utf-8" media="screen and (min-width: 640px)" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/note/mobile-v1.0.css') }}" charset="utf-8" media="screen and (max-width: 639px)"/>
+
 {% endblock %}
 
-
 {% block content %}
-<div class="main">
-    {%  for artical in articals %}
-    <hr />
-    <a href="{{ url_for('artical', id=artical.id) }}" class="note">
-        <article class="note">
-            <h3>{{ artical.title }}</h3>
-            {{ artical.preview | safe}} .......
-        </article>
-    </a>
-    {% endfor %}
-    <hr />
-    {% block page %}
-    {% if page != 1 %}
-    <a class="previousPage" href="{{ url_for('note', page=page-1) }}">上一页</a>
-    {% endif %}
-    {% if articals[-1].id != 1 %}
-    <a class="nextPage" href="{{ url_for('note', page=page+1) }}">下一页</a>
-    {% endif %}
-    {% endblock %}
+<div class="author">
+    <div class="title">
+        <p>Author</p>
+
+    </div>
+    <div class="head_name">
+        <div class="head">
+            <img src="{{ url_for('static', filename='img/head.jpg') }}" class="head">
+        </div>
+        <div class="name">
+            <p class="name">Adrian_Yan</p>
+            <p class="describe">面向百度编程选手</p>
+        </div>
+
+    </div>
+    <table>
+        <div class="adress">
+            <div class="icon">
+                <a href="https://github.com/cuoxin"><ion-icon name="logo-github"></ion-icon></a>
+                <ion-icon name="logo-python"></ion-icon>
+                <ion-icon name="logo-steam"></ion-icon>
+            </div>
+        </div>
+    </table>
 
 </div>
+<div class="articals">
+    <div class="head">
+        <p>Artical</p>
+    </div>
+    {% for artical in articals %}
+    <div class="artical">
+        <div class="time">
+            <p>{{ artical.time }}</p>
+        </div>
+        <a href="{{ url_for('artical', id=artical.id) }}">
+        <div class="artical_content">
+            <h4>{{ artical.title }}</h4>
+            <p>{{ artical.preview }}</p>
+        </div>
+        </a>
+    </div>
+    {% endfor %}
+
+    <div class="tr_page">
+        {% if page != 1 %}
+        <a href="{{ url_for('note', page=page-1) }}">
+            <div class="previous">
+                <p>&lt;&lt;&lt;</p>
+            </div>
+        </a>
+        {% endif %}
+        <div class="how_many">
+            <p>{{ page }}</p>
+        </div>
+        {% if articals[-1].id != 1 %}
+        <a href="{{ url_for('note', page=page+1) }}">
+            <div class="next">
+                <p>&gt;&gt;&gt;</p>
+            </div>
+        </a>
+        {% endif %}
+
+    </div>
+</div>
+
 {% endblock %}

@@ -1,0 +1,9 @@
+div.author {
+    width: 29rem;
+    float: left;
+}
+
+div.articals {
+    width: 95rem;
+    float: right;
+}
